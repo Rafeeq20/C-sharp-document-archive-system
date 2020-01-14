@@ -1,0 +1,14 @@
+oracle ssd = orcl;
+
+CREATE USER RAFA IDENTIFIED BY RAFA;
+GRANT DBA TO RAFA;
+
+create table docs(
+doc_id               number(10)
+,doc_type            number(1)
+,doc_name            varchar2(200)
+,doc_content         varchar2(500)
+,isu_date            date
+,enter_date          date
+,doc_data            blob 
+,constraint docs_pk primary key(doc_id));
